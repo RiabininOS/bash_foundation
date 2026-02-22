@@ -5,11 +5,12 @@
 #
 # file that load functions
 #=============================================================================#
-echo -e "\e[5m\e[43m\e[30m"
-echo "main functions file loaded"
-echo -e "\e[0m"
-sleep 2
-#=============================================================================#
 
+FUNCTIONS_DIR="${PROJECT_DIR}/functions/"
+
+#=============================================================================#
+# load modules
+source "${FUNCTIONS_DIR}_echo-functions.sh"
+source "${FUNCTIONS_DIR}_sleep-functions.sh"
 #=============================================================================#
 # TESTING AREA

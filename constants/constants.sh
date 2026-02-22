@@ -8,7 +8,13 @@
 echo -e "\e[5m\e[43m\e[30m"
 echo "main constants loaded"
 echo -e "\e[0m"
-sleep 2
+sleep 1
+
+#=============================================================================#
+# sleep constants
+export SLEEP_SHORT=1
+export SLEEP_LONG=5
+
 #=============================================================================#
 # echo constants
 export ECHO_CLEAR="\e[0m"

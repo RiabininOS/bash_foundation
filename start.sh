@@ -17,7 +17,7 @@ if [[ "$(whoami)" == "root" ]]; then
 	echo -e "| root check is ok |"
 	echo -e "+------------------+"
 	echo -e "\e[0m"
-	sleep 2
+	sleep 1
 else
 	echo -e "\e[5m\e[41m\e[30m"
 	echo -e "+--------------------------+"
@@ -35,7 +35,7 @@ if [[ -f "$(pwd)/start.sh" ]]; then
 	echo "| init file found |"
 	echo "+-----------------+"
 	echo -e "\e[0m"
-	sleep 2
+	sleep 1
 else
 	echo -e "\e[5m\e[41m\e[30m"
 	echo "+----------------------------------------------------+"
@@ -53,7 +53,7 @@ if [[ -f "$(pwd)/functions/functions.sh" ]]; then
 	echo "| functions main file found |"
 	echo "+---------------------------+"
 	echo -e "\e[0m"
-	sleep 2
+	sleep 1
 else
 	echo -e "\e[5m\e[41m\e[30m"
 	echo "+---------------------------------------+"
@@ -71,7 +71,7 @@ if [[ -f "$(pwd)/constants/constants.sh" ]]; then
 	echo "| constants main file found |"
 	echo "+---------------------------+"
 	echo -e "\e[0m"
-	sleep 2
+	sleep 1
 else
 	echo -e "\e[5m\e[5m\e[41m\e[30m"
 	echo "+---------------------------------------+"
@@ -85,7 +85,7 @@ fi
 
 export PROJECT_DIR="$(pwd)"
 #=============================================================================#
-sleep 2
+sleep 1
 
 #clear
 
@@ -96,3 +96,21 @@ source ${PROJECT_DIR}/constants/constants.sh
 
 # functions
 source ${PROJECT_DIR}/functions/functions.sh
+
+#=============================================================================#
+# TESTING AREA
+echo_success "check"
+
+echo "next line"
+
+echo_info "info"
+
+sleep_short
+
+echo "next line"
+
+echo_fail "fail"
+
+sleep_long
+
+echo "next line"
