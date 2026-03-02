@@ -99,18 +99,3 @@ source ${PROJECT_DIR}/functions/functions.sh
 
 #=============================================================================#
 # TESTING AREA
-echo_success "check"
-
-echo "next line"
-
-echo_info "info"
-
-sleep_short
-
-echo "next line"
-
-echo_fail "fail"
-
-sleep_long
-
-echo "next line"

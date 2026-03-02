@@ -12,5 +12,6 @@ FUNCTIONS_DIR="${PROJECT_DIR}/functions/"
 # load modules
 source "${FUNCTIONS_DIR}_echo-functions.sh"
 source "${FUNCTIONS_DIR}_sleep-functions.sh"
+source "${FUNCTIONS_DIR}_distro-detect.sh"
 #=============================================================================#
 # TESTING AREA
