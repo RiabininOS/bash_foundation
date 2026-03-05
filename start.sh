@@ -99,3 +99,17 @@ source ${PROJECT_DIR}/functions/functions.sh
 
 #=============================================================================#
 # TESTING AREA
+
+distro_detect_shortname
+case "${DISTRO_SHORTNAME}" in
+	"debian")
+		echo_success "DEBIAN FOUND"
+		source ${PROJECT_DIR}/configs/debian/default.sh
+		;;
+	*)
+		echo_fail "+----------------+"
+		echo_fail "| Unknown distro |"
+		echo_fail "+----------------+"
+		exit 1
+		;;	
+esac
