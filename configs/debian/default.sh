@@ -5,7 +5,7 @@
 
 # package installation
 apt install -y \
-bash bash-completion shellcheck fzf
+bash bash-completion shellcheck bashdb fzf
 
 apt install -y \
 micro hx mc
@@ -49,3 +49,42 @@ sudo -u "riabininos" git config --global user.email "riabininos@gmail.com" && ec
 git config --system core.editor hx
 sudo -u "riabininos" git config --global core.editor hx
 
+# helix setup
+
+touch /home/riabininos/.config/helix/config.toml
+touch /home/riabininos/.config/helix/languages.toml
+
+cat <<EOF > /home/riabininos/.config/helix/config.toml
+theme = "starlight"
+
+[editor]
+cursorline = true
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+
+[editor.soft-wrap]
+enable = false
+
+EOF
+
+cat <<EOF > /home/riabininos/.config/helix/languages.toml
+[[language]]
+name = "bash"
+file-types = ["config", "sh", "bash", "zsh", ".bash_login", ".bash_logout", ".bash_profile", ".bashrc", ".profile"]
+
+EOF
+
+hx --grammar fetch
+hx --grammar build
