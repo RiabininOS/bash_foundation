@@ -29,7 +29,8 @@ apt install -y \
   screen tmux mc
 
 apt install -y \
-  kitty
+  kitty \
+  powerline powerline-doc powerline-gitstatus
 
 # npm packages
 npm install -g npm@latest
@@ -48,7 +49,7 @@ git config --system core.editor hx
 sudo -u "riabininos" git config --global core.editor hx
 
 # helix setup
-mkdir -p /home/riabininos/.config/
+mkdir -p /home/riabininos/.config/helix/
 touch /home/riabininos/.config/helix/config.toml
 chmod 775 /home/riabininos/.config/helix/config.toml
 touch /home/riabininos/.config/helix/languages.toml
@@ -91,5 +92,19 @@ EOF
 hx --grammar fetch
 hx --grammar build
 
-sudo -u "riabininos" hx --gramar fetch
-sudo -u "riabininos" hx --gramar build
+sudo -u "riabininos" hx --grammar fetch
+sudo -u "riabininos" hx --grammar build
+
+# powerline adding
+
+echo <<EOF > /home/riabininos/.bashrc
+
+# powerline adding to terminal
+if p -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
+  powerline-daemon -q
+  POWERLINE_BASH_CONTINUATION=1
+  POWERLINE_BASH_SELECT=1
+  source /usr/share/powerline/bindings/bash/powerline.sh
+fi
+
+EOF
