@@ -2,6 +2,14 @@
 
 ## last updates
 
+date: 2026-03-05
+
+	tuned basic setup
+
+	helix configurated
+
+	added powerline plugin for bash
+
 date: 2026-02-22
 
 	functions load reorganized
