@@ -97,7 +97,7 @@ sudo -u "riabininos" hx --grammar build
 
 # powerline adding
 
-echo <<EOF > /home/riabininos/.bashrc
+cat <<EOF >> /home/riabininos/.bashrc
 
 # powerline adding to terminal
 if p -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
